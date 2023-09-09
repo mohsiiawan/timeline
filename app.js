@@ -1,6 +1,6 @@
 var sections = document.querySelectorAll('#section');
 var windowHeight = window.innerHeight;
-var scrollThreshold = 40; // 30% threshold for activating sections
+var scrollThreshold = 40;
 
 window.addEventListener('scroll', () => {
     for (var i = 0; i < sections.length; ++i) {
