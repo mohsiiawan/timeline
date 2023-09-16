@@ -1,9 +1,8 @@
 var sections = document.querySelectorAll('#section');
 var windowHeight = window.innerHeight;
-var scrollThreshold = 40;
-
-window.addEventListener('scroll', () => {
-    for (var i = 0; i < sections.length; ++i) {
+var scrollThreshold = 50;
+function handleScroll() {
+    for (var i = 0; i < sections.length; i++) {
         var rect = sections[i].getBoundingClientRect();
         var topPercentage = (rect.y / windowHeight) * 100;
 
@@ -13,16 +12,14 @@ window.addEventListener('scroll', () => {
             sections[i].classList.remove('active');
         }
     }
-});
+}
 
-// Optional: Add an initial check for sections that are already in the top 30%
-window.addEventListener('load', () => {
-    for (var i = 0; i < sections.length; ++i) {
-        var rect = sections[i].getBoundingClientRect();
-        var topPercentage = (rect.y / windowHeight) * 100;
+// Function to handle the window resize event
+function handleResize() {
+    windowHeight = window.innerHeight;
+    handleScroll();
+}
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
+window.addEventListener('resize', handleResize);
 
-        if (topPercentage <= scrollThreshold) {
-            sections[i].classList.add('active');
-        }
-    }
-});
