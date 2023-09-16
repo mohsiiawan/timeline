@@ -1,6 +1,6 @@
 var sections = document.querySelectorAll('#section');
 var windowHeight = window.innerHeight;
-var scrollThreshold = 50;
+var scrollThreshold = 50;// This is basically the vertical positon in percentage where you want to active timeline section
 function handleScroll() {
     for (var i = 0; i < sections.length; i++) {
         var rect = sections[i].getBoundingClientRect();
