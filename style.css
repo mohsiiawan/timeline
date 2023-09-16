@@ -23,14 +23,6 @@ body{
     box-sizing: border-box;
     position: relative;
 }
-#progress {
-    position: absolute;
-    width: 4px;
-    left: 50%;
-    top: 0;
-    background-color: black;
-
-}
 .container::before{
     content: '';
     display: inline;
