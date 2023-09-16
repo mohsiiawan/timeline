@@ -1,3 +1,5 @@
+var maincontainer = document.querySelector('.container');
+var progressbar = document.getElementById('progress');
 var sections = document.querySelectorAll('#section');
 var windowHeight = window.innerHeight;
 var scrollThreshold = 50;
@@ -12,7 +14,7 @@ function handleScroll() {
             sections[i].classList.remove('active');
         }
     }
-}
+}a
 
 // Function to handle the window resize event
 function handleResize() {
