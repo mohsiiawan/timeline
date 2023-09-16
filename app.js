@@ -1,4 +1,4 @@
-var sections = document.querySelectorAll('.feature');
+var sections = document.querySelectorAll('#section');
 var windowHeight = window.innerHeight;
 var scrollThreshold = 50;
 function handleScroll() {
@@ -7,9 +7,9 @@ function handleScroll() {
         var topPercentage = (rect.y / windowHeight) * 100;
 
         if (topPercentage <= scrollThreshold) {
-            sections[i].classList.add('visible');
+            sections[i].classList.add('active');
         } else {
-            sections[i].classList.remove('visible');
+            sections[i].classList.remove('active');
         }
     }
 }
