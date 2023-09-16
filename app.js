@@ -41,4 +41,3 @@ function handleResize() {
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
 window.addEventListener('resize', handleResize);
-
